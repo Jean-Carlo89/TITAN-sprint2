@@ -1,7 +1,12 @@
-import * as readline from "readline/promises";
+// app.ts
+
+// 1. Mantenha o require do module-alias no topo
 require("module-alias/register");
-///** */ Facilitador para os caminhos no ts pra js
-import { stdin as input, stdout as output } from "process";
+
+// 2. Importe módulos nativos ou suas funções específicas usando a sintaxe CommonJS (require)
+import * as readline from "readline/promises";
+import { stdin as input, stdout as output } from "process"; // Esta linha está OK, pois process é nativo
+
 import { handleListAccounts } from "./AccountsRouter";
 import { handleNewAccount } from "./clientRoute";
 

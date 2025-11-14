@@ -56,6 +56,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "moduleResolution": "node",
+    "rootDir": "./",
    // "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
