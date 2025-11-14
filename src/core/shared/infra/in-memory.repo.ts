@@ -18,10 +18,7 @@ export abstract class InMemoryRepository<E extends Entity> implements IRepositor
   }
 
   async insert(entity: E): Promise<void> {
-    console.log(this.items);
     await this.items.push(entity);
-
-    console.log(this.items);
   }
   async findById(Id: number): Promise<E | null> {
     const item = this.items.find((item) => item.id === Id);
